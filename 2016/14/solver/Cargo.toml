@@ -1,0 +1,12 @@
+[package]
+name = "aoc14"
+version = "0.1.0"
+authors = ["julminen"]
+
+[dependencies]
+md5 = "0.2.*"
+scoped_threadpool = "0.1.*"
+num_cpus = "1.0"
+
+[profile.release]
+#debug = true

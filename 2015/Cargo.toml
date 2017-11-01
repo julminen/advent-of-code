@@ -1,0 +1,9 @@
+[package]
+name = "aoc"
+version = "0.1.0"
+authors = ["julminen"]
+
+[dependencies]
+md5 = "0.2.*"
+bmp = "0.2.*"
+rustc-serialize = "0.3"

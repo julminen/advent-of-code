@@ -1,0 +1,36 @@
+Input file: input, eggs: 12
+
+00:  cpy a b
+01:  dec b
+02:  cpy a d      <---\
+03:  cpy 0 a          |
+04:  cpy b c     <-\  | 1st: a: 0 b: 11, c: 0, d: 12
+05:  inc a     <-\ |  |
+06:  dec c       | |  |
+07:  jnz c -2   -/ |  |
+08:  dec d         |  |
+09:  jnz d -5   ---/  |
+
+Break at 10. Mem: Memory { a: 132, b: 11, c: 0, d: 0 }  ->  a = a + c * d
+
+10:  dec b            |
+11:  cpy b c          |
+12:  cpy c d          |
+13:  dec d    <-\     |
+14:  inc c       |    |
+15:  jnz d -2  -/     |
+16:  tgl c            |
+17:  cpy -16 c        |
+18:  jnz 1 c    -----/      -> cpy 1 c
+19:  cpy 96 c
+20:  jnz 79 d   <-\         -> cpy 79 d
+21:  inc a    <-\  |
+22:  inc d       | |        -> dec d
+23:  jnz d -2  -/  |
+24:  inc c         |        -> dec c
+25:  jnz c -5   --/
+
+
+Toggle 24, mem: Memory { a: 19958400, b: 4, c: 8, d: 0 }
+Toggle OpCode { op_type: Inc, arguments: ["c"] } -> OpCode { op_type: Dec, arguments: ["c"] }
+

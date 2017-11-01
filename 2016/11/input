@@ -1,0 +1,52 @@
+The first floor contains 
+    a polonium generator, 
+    a thulium generator, a thulium-compatible microchip,
+    a promethium generator,
+    a ruthenium generator, a ruthenium-compatible microchip,
+    a cobalt generator, and a cobalt-compatible microchip.
+The second floor contains 
+    a polonium-compatible microchip and 
+    a promethium-compatible microchip.
+The third floor contains nothing relevant.
+The fourth floor contains nothing relevant.
+
+
+
+F4
+F3
+F2        PlM             PrM 
+F1 E  PlG      TG TM  PrG      RG RM  CG CM
+
+    GM GM GM GM GM
+F E Pl T  Pr R  C
+4 0 00 00 00 00 00
+3 0 00 00 00 00 00
+2 0 01 00 01 00 00
+1 1 10 11 10 11 11
+
+0000000000000000
+0000000000000000
+0000001000100000
+0000010111011111
+
+0000000000000000
+0000000000000000
+0000000100010000
+1000001011101111
+
+
+Possible moves: 
+    Elevator: -1 / +1 floors, 1 or 2 items
+    M: own GEN or no GENs
+
+Goal:
+
+    GM GM GM GM GM
+F E Pl T  Pr R  C
+4 1 11 11 11 11 11
+3 0 00 00 00 00 00
+2 0 00 00 00 00 00
+1 0 00 00 00 00 00
+
+
+

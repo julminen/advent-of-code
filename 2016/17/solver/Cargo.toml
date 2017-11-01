@@ -1,0 +1,7 @@
+[package]
+name = "solver"
+version = "0.1.0"
+authors = ["julminen"]
+
+[dependencies]
+md5 = "0.2.*"
